@@ -11,7 +11,7 @@
 2) Enter the repository folder.
 3) Terminal command: ` sh run.sh `
 4) Output will be a file **SomeFile.txt** with text which is also displayed on the terminal.
-5) ___ Baki kaam tera _____ (Aniket)
+5) ___ Baki kaam tera _____ (Aniket) and (Shreyas) - cleaning
 
 ## References:
 - http://kerseykyle.com/articles/ARM-assembly-hello-world
