@@ -1,6 +1,3 @@
-@@@ vim: set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab: 
-@@@ vim: ft=arm 
-
 @@@ This file include Linux system calls
 @@@ Reference: https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl
 @@@ Reference: https: //github.com/torvalds/linux/blob/master/include/linux/syscalls.h
