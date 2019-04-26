@@ -1,6 +1,4 @@
-@@@ Count characters from STDIN
-@@@ vim: set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab bg=dark: 
-@@@ vim: ft=arm 
+@@@ Huffman related functions. Count from file, sort, tree array indexing, etc.
 
 @@@ External Functions
     .global fputs
@@ -227,6 +225,7 @@ print_checker:
 @@@ My functions
 
 tree_start:
+    @@ Builds a tree array 
     PUSH    {R0-R12,LR}         @ Push the existing registers on to the stack
     BL      print_tree_header   @ Prints a header indicating starting of tree
     BL      init_tree_chars     @ Initialize new array for tree
@@ -237,7 +236,6 @@ tree_start:
     LDR     R4,=tree_array      @ Starting tree array memory location
     ADDS    R5, R4, #2560       @ End tree array location
     MOV     R11,#0xFE           @ Special Character          
-    
 reverse_sort:
     @@ Gives the address of the last element in the sorted array
     @@ Input R0: array starting address, R1: array last address
@@ -247,7 +245,6 @@ reverse_sort:
     ADDS    R0,R0,#5            @ Increment the memory location by 5
     CMP     R0,R1               @ Have we reached the end?
     BNE     reverse_sort        @ If not, loop again
-
 tree_loop:
     @@ Input:: R0: last element address(SA), R3: start memory location(SA)
     @@ Input:: R4: tree starting address(TA),R5: tree end location(TA)
@@ -275,8 +272,7 @@ tree_loop:
     BEQ     tree_exit           @ If so, then exit the loop                
     BL      sort_tree           @ Sort the old array with an extra node element
     @BL      print_sorted        @ Print the sorted array
-    B       tree_loop           @ All way back to the top
-    
+    B       tree_loop           @ All way back to the top  
 tree_exit:
     SUBS    R0,R0,#4            @ Subtracting address
     LDR     R6,[R0]             @ Loading 1st freq value into R6
@@ -293,7 +289,7 @@ tree_exit:
 
 
 num_tree:
-    @@ Function to get tree index   
+    @@ Function to get tree position index   
     PUSH    {R0-R12,LR}         @ Push the existing registers on to the stack
     LDR     R0,=tree_indexing   @ Print header
     BL      puts                @ print
@@ -345,13 +341,11 @@ num_exit:
     POP     {R0-R12,PC}         @ Pop the registers off of the stack and return
     
 
-
 print_tree_header:
     PUSH    {R0-R12,LR}         @ Push the existing registers on to the stack
     LDR     R0,=tree_header     @ Print header
     BL      puts                @ |
     POP     {R0-R12,PC}         @ Pop the registers off of the stack and return
-
 
 
 init_tree_chars:
@@ -364,7 +358,6 @@ init_tree_chars:
     POP     {R0-R12,PC}         @ Return when loop completes, restore registers   
     
 
-
 init_num_array:
     @@ Initialize the memory used for tree
     PUSH    {R0-R12,LR}         @ Push registers on to stack
@@ -373,7 +366,6 @@ init_num_array:
     MOV     R2,#0xFFFFFFFF      @ Initial value
     BL      init_array          @ Initialize array
     POP     {R0-R12,PC}         @ Return when loop completes, restore registers  
-
 
 
 
@@ -408,7 +400,6 @@ sort_tree_exit:
     POP     {R0-R12,PC}         @ Pop the registers off of the stack and return
     
     
-
 
 print_tree_arr:
     @@ Prints a list of TREE array
