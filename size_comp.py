@@ -1,3 +1,7 @@
+"""
+Code for executing the Huffman codes for a file and check the compression ratio
+"""
+
 print('Comparing File Size:')
 f=open("SomeFile.txt","r")
 contents=f.read()
