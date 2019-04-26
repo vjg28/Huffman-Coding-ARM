@@ -11,7 +11,9 @@
 2) Enter the repository folder.
 3) Terminal command: ` sh run.sh `
 4) Output will be a file **SomeFile.txt** with text which is also displayed on the terminal.
-5) ___ Baki kaam tera _____ (Aniket) and (Shreyas) - cleaning
+5) Terminal command: `python3 size_comp.py` to print the compression ratio and size of file.
+6) Output will be two files: **Original.txt** and **Compressed.txt**, and their sizes can be simultaneously compared. 
 
 ## References:
 - http://kerseykyle.com/articles/ARM-assembly-hello-world
+- Codes for reading files and printing in terminal.(We did take reference)
