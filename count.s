@@ -101,7 +101,7 @@ sort_chars_loop:
     BNE     sort_chars_loop     @ If not, loop again
 sort_chars_loop_done:
     CMP     R10,#0              @ Did we find a max count?
-    BLEQ    sort_chars_l_exit   @ If not, we're done
+    BLEQ    sort_chars_l_exit   @ If not, we are done
     STRB    R9,[R0,R4]          @ Store max char at current sorted array index
     ADDS    R4,#1               @ Increment sorted array index
     STR     R11,[R0,R4]         @ Store max count at current sorted array index + 1
