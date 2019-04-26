@@ -15,11 +15,11 @@
 6) Output will be two files: **Original.txt** and **Compressed.txt**, and their sizes can be simultaneously compared. 
 
 ## File Structure
-- huffman.s
-  - count.s
-    - all other files
+- huffman.s (Original work)
+  - count.s (Original work)
+    - all other files (Helper functions)
 
-Do read `run.sh` before running the code. Every major function called in `huffman.s` is from `count.s`.
+Do read `run.sh` before running the code. Every major function called in `huffman.s` is from `count.s` and only helper files are referenced from some other places.
 ## References:
 - http://kerseykyle.com/articles/ARM-assembly-hello-world
-- Codes for reading files and printing in terminal.(We did take reference)
+- Codes for reading files and printing in terminal.(We did take reference from some other people's work.)
