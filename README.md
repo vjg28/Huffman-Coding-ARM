@@ -1,5 +1,8 @@
 # Huffman-Coding-ARM
-## Pre-Requisites
+## Warning**
+- The tree is implemented using an [array](https://nptel.ac.in/courses/106103069/51), and the architecture supports 32 bits registers, so there is a limitation on the maximum index that can be stored. The maximum value of the index is 2^32 -1 (limit for int values). 
+- If the tree has 32 or more elements, then in the worst case condition, the index value may exceed the limit and the code will not perform as expected. So, if anyone plans to try a new ***file.txt***, do ensure that it has less than 28-30 unique characters for huffman coding to work. Other than that, the code is entirely designed to take all 256 ascii characters and will perform as expected till the tree indexing part.
+## Prerequisites:
 - Linux (Ubuntu- 16.04) 
 - Qemu Emulator
   - `sudo apt install binfmt-support qemu qemu-user-static`
@@ -23,3 +26,6 @@ Do read `run.sh` before running the code. Every major function called in `huffma
 ## References:
 - http://kerseykyle.com/articles/ARM-assembly-hello-world
 - Codes for reading files and printing in terminal.(We did take reference from some other people's work.)
+
+## TO DO:
+- Tree implementation without array
