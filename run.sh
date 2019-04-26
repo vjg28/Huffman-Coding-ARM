@@ -1,6 +1,3 @@
-"""
-Work done by Varshil, Aniket and Shreyas
-"""
 # Delete old object & executable files
 rm -rf *.o
 rm -rf huffman
