@@ -1,4 +1,4 @@
-@@@ Count characters from STDIN
+@@@ Main file for executing Huffman encoding (File name can be changed here)
 
 @@@ External Methods
     .global status
