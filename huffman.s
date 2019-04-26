@@ -50,5 +50,3 @@ _start:
     .data
 
 in_path: .asciz "file1.txt"
-out_path_1: .asciz "binary_file.txt"
-out_path_2: .asciz "compressed_binary_file.txt"
