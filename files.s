@@ -1,6 +1,4 @@
 @@@ File Related Methods
-@@@ vim: set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab: 
-@@@ vim: ft=arm 
 
 @@@ External Methods
     .global read
